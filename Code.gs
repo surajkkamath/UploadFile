@@ -1,7 +1,7 @@
 function uploadFiles(url) {
   var response =  UrlFetchApp.fetch(url)
   var fileName  = getFilenameFromURL(url)
-  var folder = DriveApp.getFolderById('1IxMiswEfi67ovoBf8ZH1RV7qVPx1Ks6l');
+  var folder = DriveApp.getFolderById('your folder id found in url');
   var blob = response.getBlob();
   var file = folder.createFile(blob)
   file.setName(fileName)
